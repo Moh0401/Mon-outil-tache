@@ -3,23 +3,10 @@
   --back-color-secondaire:white;
   --back-color-tertiaire:#BEB3B3;
 }
-*{
-    margin: 0%;
-}
+
 header{
     background-color: var(--back-color-principal);
     padding: 3% 0% 3% 0%;
-}
-nav{
-    padding-right: 7%;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-header button{
-    border-radius: 30px;
-    padding: 30%;
-    background-color: white;
 }
 h1{
     font-size: 305%;
@@ -33,13 +20,13 @@ em{
     padding: 10% 0% 10% 0%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 .section_2{
-    margin: 0% 5% 0% 5%;
-    border: solid 1px;
-    border-radius: 30px;
+    margin: 5% 5% 5% 5%;
+    border: solid 2px;
 }
 
 input{
@@ -67,8 +54,8 @@ h2{
     display: flex;
     justify-content: center;
     padding: 3% 0% 3% 0%;
+    margin: 0%;
     font-size: 200%;
-    border-radius: 30px 30px 0px 0px;
 }
 button{
     border: solid 2px;
@@ -79,10 +66,150 @@ button{
     background-color: black;
     color:white;
     font-size: 150%;
-    padding: 2% 33% 2% 2%;
-    border-radius: 0px 0px 30px 30px;
+    padding: 2% 23% 2% 2%;
 }
+.boutonTerminer:active{
+    animation: ma-super-animation 2s linear infinite forwards;
+  }
+  
+  @keyframes ma-super-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .boutonSupprimer:active{
+    animation: ma-super-animation 2s linear infinite forwards;
+  }
+  
+  @keyframes ma-super-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 footer{
     background-color: black;
     padding:5%;
+}
+@media screen and (max-width: 768px) {
+    
+:root {
+    --font-size-base: 16px; 
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0; 
+  }
+  
+ 
+  header {
+    background-color: var(--back-color-principal);
+    padding: 1rem 0; 
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  header button {
+    border-radius: 30px;
+    padding: 1rem; 
+    background-color: var(--back-color-secondaire);
+  }
+  
+  h1 {
+    font-size: calc(1.5rem + 2vw); 
+    width: 100%;
+  }
+  
+  em {
+    color: var(--back-color-tertiaire);
+  }
+  
+  
+  .section_1,
+  .section_2 {
+    padding: 2rem 0; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .section_2 {
+    margin: 1rem auto; 
+    border: 1px solid;
+    border-radius: 10px; 
+  }
+  
+  
+  input {
+    border: 2px solid;
+    border-radius: 10px; 
+    padding: 0.5rem; 
+  }
+  
+  div input {
+    padding-left: 1rem; 
+  }
+  
+  form {
+    width: 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 1rem; 
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.5rem; 
+  }
+  
+  
+  h2 {
+    background-color: var(--back-color-principal);
+    color: var(--back-color-secondaire);
+    padding: 1rem 0; 
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  button {
+    border: 2px solid;
+    border-radius: 10px; 
+    padding: 0.5rem 1rem; 
+  
+  .sous_titre {
+    background-color: black;
+    color: white;
+    font-size: 1rem; 
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+  }
+  
+
+  footer {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+}
 }

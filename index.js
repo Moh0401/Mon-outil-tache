@@ -27,7 +27,6 @@ formulaire.addEventListener("submit", (event) => {
   const bouton = document.createElement('span');
   bouton.innerText = date_echeance;
   bouton.style.borderRadius = "30px";
-  bouton.style.borderStyle = "solid";
   bouton.style.borderColor = "black";
   bouton.style.borderWidth = "1%";
   bouton.style.padding = "1%";
@@ -39,8 +38,7 @@ formulaire.addEventListener("submit", (event) => {
   span.style.color = "black";
   span.style.backgroundcolor = "white";
   span.style.borderRadius = "30px";
-  span.style.borderStyle = "solid";
-  span.style.borderWidth = "1%";
+  span.style.borderWidth = "0,5%";
   span.style.padding = "1%";
   elementListe.appendChild(span);
 
@@ -55,6 +53,8 @@ boutonSupprimer.style.borderStyle = "solid";
 boutonSupprimer.style.borderColor = "black";
 boutonSupprimer.style.borderWidth = "1%";
 boutonSupprimer.style.padding = "1%";
+boutonSupprimer.classList.add("boutonSupprimer");
+
 
 elementListe.appendChild(boutonSupprimer);
 
@@ -65,21 +65,33 @@ boutonSupprimer.addEventListener("click", () => {
 
    // Vider les champs du formulaire
    formulaire.reset();
-});
-const boutonSupprimer = document.createElement("button");
-boutonSupprimer.innerText = "Supprimer";
-boutonSupprimer.style.borderRadius = "30px";
-boutonSupprimer.style.borderStyle = "solid";
-boutonSupprimer.style.borderColor = "black";
-boutonSupprimer.style.borderWidth = "1%";
-boutonSupprimer.style.padding = "1%";
+   
+  
+// Créer un bouton "Terminer"
+const boutonTerminer = document.createElement("button");
+boutonTerminer.innerText = "Terminer";
+boutonTerminer.style.borderRadius = "30px";
+boutonTerminer.style.borderStyle = "solid";
+boutonTerminer.style.borderColor = "black";
+boutonTerminer.style.borderWidth = "1%";
+boutonTerminer.style.padding = "1%";
+boutonTerminer.classList.add("boutonTerminer");
 
-elementListe.appendChild(boutonSupprimer);
+// Ajouter le bouton à l'élément de liste
+elementListe.appendChild(boutonTerminer);
 
-boutonSupprimer.addEventListener("click", () => {
-  // Supprimer l'élément de liste
-  elementListe.parentNode.removeChild(elementListe);
+boutonTerminer.addEventListener("click", () => {
+  // Cocher la tâche comme terminée
+  elementListe.classList.add("terminee");
+
+  // Désactiver le bouton "Terminer"
+  boutonTerminer.disabled = true;
 });
+
+});
+
+
+
 
 
 
