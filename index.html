@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="utf-8">
+    <title>Outil de gestion de Tâche</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#autre-partie">
+                <button type="button">
+                  Liste
+                </button>
+              </a>
+        </nav>
+    </header>
+    <main>
+        <section class="section_1">
+            <h1>Outil de gestion de <br><em>tâches</em></h1>
+            <form id="mon_formulaire">
+                <div class="taches">
+                    <label for="tache">Tâche :</label>
+                    <input type="text" id="tache" placeholder="Votre tâche" name="tache">
+                </div> 
+                <div class="date_decheance"> 
+                    <label for="date_echeance">Date d’écheance :</label>
+                    <input type="date" id="date_echeance" name="date_echeance">
+                </div>
+                <div class="prioritaire">
+                    <label for="priorite">Priorité :</label>
+                    <input type="text" id="priorite" placeholder="N/5" name="priorite">
+                </div>
+               <button type="submit">Ajouter</button>
+            </form>
+            
+        </section>
+        <section class="section_2">
+            <h2>Liste</h2>
+            <div class="sous_titre">
+                <div>Tâche</div>
+                <div>Date d'écheance</div>
+                <div>Priorité</div>
+            </div>
+            <div id="liste_donnees"></div>
+        </section>
+        
+        
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
