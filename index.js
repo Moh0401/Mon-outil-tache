@@ -3,8 +3,6 @@ const listeDonnees = document.getElementById("liste_donnees");
 
 formulaire.addEventListener("submit", (event) => {
   event.preventDefault();
-  
-
   // Récupérer les valeurs des champs du formulaire
   const tache = document.getElementById("tache").value;
   const date_echeance = document.getElementById("date_echeance").value;
@@ -19,9 +17,10 @@ formulaire.addEventListener("submit", (event) => {
   const h4 = document.createElement('h4');
   h4.innerText = tache;
   elementListe.appendChild(h4);
-  elementListe.style.margin = "2%";
-  elementListe.style.justifyContent = "space between";
+  elementListe.style.margin = "1%";
+  elementListe.style.justifyContent = "space-around";
   elementListe.style.alignItems = "center";
+  elementListe.classList.add("avantTerminer")
 
   // Ajouter la date à l'élément de liste
   const bouton = document.createElement('span');
@@ -89,6 +88,21 @@ boutonTerminer.addEventListener("click", () => {
 });
 
 });
+
+const submitButton = document.querySelector('button[type="submit"]');
+const section_1 = document.querySelector(".section_1");
+
+submitButton.addEventListener("click", function() {
+  // Définir l'image de fond
+  section_1.style.backgroundImage = "url('5xOZ.GIF')";
+  section_1.style.backgroundSize= "cover"
+
+  // Définir un délai pour la disparition de l'image
+  setTimeout(function() {
+    section_1.style.backgroundImage = "";
+  }, 500); // 5 secondes de délai, ajustez selon vos besoins
+});
+
 
 
 

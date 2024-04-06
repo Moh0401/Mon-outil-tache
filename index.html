@@ -12,26 +12,26 @@
     </header>
     <main>
         <section class="section_1">
-            <h1>Outil de gestion de <br><em>tâches</em></h1>
-            <form id="mon_formulaire">
-                <div class="taches">
+            <h1 aria-label="titre">Outil de gestion de <br><em>tâches</em></h1>
+            <form id="mon_formulaire" aria-label="Renseigné vos tâches">
+                <div class="taches" aria-label="titre de tache">
                     <label for="tache">Tâche :</label>
                     <input type="text" id="tache" placeholder="Votre tâche" name="tache">
                 </div> 
-                <div class="date_decheance"> 
+                <div class="date_decheance" aria-label="date d'écheance de la tâche"> 
                     <label for="date_echeance">Date d’écheance :</label>
                     <input type="date" id="date_echeance" name="date_echeance">
-                </div>
+                </div aria-label="Priorité de la tache">
                 <div class="prioritaire">
                     <label for="priorite">Priorité :</label>
                     <input type="text" id="priorite" placeholder="N/5" name="priorite">
                 </div>
-               <button type="submit">Ajouter</button>
+               <button type="submit" aria-label="enregistrer">Ajouter</button>
             </form>
             
         </section>
         <section class="section_2">
-            <h2>Liste</h2>
+            <h2 aria-label="liste de tâches">Liste</h2>
             <div class="sous_titre">
                 <div>Tâches</div>
                 <div>Date d'écheance</div>

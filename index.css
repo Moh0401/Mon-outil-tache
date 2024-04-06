@@ -11,6 +11,7 @@ header{
 h1{
     font-size: 305%;
     width: 40%;
+    background-color: transparent;
    
 }
 em{
@@ -38,6 +39,7 @@ div input{
 }
 
 form{
+    background-color: transparent;
     width: 40%;
     display: grid;
     grid-template-columns: auto;
@@ -63,11 +65,28 @@ button{
 }
 .sous_titre{
     display: flex;
+    justify-content: space-around;
     background-color: black;
     color:white;
     font-size: 150%;
     padding: 2% 23% 2% 2%;
 }
+.Arrière_plan_animation{
+  background-image: url('5xOZ.GIF');
+  background-size: cover;
+  animation: my-animation 2s linear 1;
+}
+
+@keyframes my-animation {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
 .boutonTerminer:active{
     animation: ma-super-animation 2s linear infinite forwards;
   }
@@ -79,6 +98,11 @@ button{
     100% {
       opacity: 1;
     }
+  }
+  .terminee{
+    padding: 1%;
+    background-color: var(--back-color-tertiaire);
+    border-radius: 30px;
   }
   
   .boutonSupprimer:active{
@@ -96,7 +120,7 @@ button{
   
 footer{
     background-color: black;
-    padding:5%;
+    padding:3%;
 }
 @media screen and (max-width: 768px) {
     
@@ -133,6 +157,7 @@ footer{
   h1 {
     font-size: calc(1.5rem + 2vw); 
     width: 100%;
+    padding-left: 5%;
   }
   
   em {
@@ -140,8 +165,8 @@ footer{
   }
   
   
-  .section_1,
-  .section_2 {
+  .section_1
+   {
     padding: 2rem 0; 
     display: flex;
     flex-direction: column; 
@@ -149,9 +174,12 @@ footer{
   }
   
   .section_2 {
-    margin: 1rem auto; 
+    display: flex;
+    flex-direction: column;
+    margin: 5%; 
     border: 1px solid;
-    border-radius: 10px; 
+    padding: 0;
+ 
   }
   
   
@@ -187,29 +215,32 @@ footer{
     padding: 1rem 0; 
     font-size: 1.2rem;
     text-align: center;
-    border-radius: 10px 10px 0 0;
+  
   }
   
   button {
     border: 2px solid;
     border-radius: 10px; 
-    padding: 0.5rem 1rem; 
+    padding: 0.5rem 1rem; }
   
   .sous_titre {
+    display: flex;
+    flex-direction: row;
     background-color: black;
     color: white;
-    font-size: 1rem; 
-    padding: 0.5rem 1rem;
-    border-radius: 0 0 10px 10px;
-    text-align: center;
+    
   }
-  
-
+  .avantTerminer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 96%;
+    
+  }
   footer {
     background-color: black;
     padding: 1rem;
     text-align: center;
   }
   
-}
 }
