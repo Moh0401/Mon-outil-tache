@@ -5,6 +5,7 @@ formulaire.addEventListener("submit", (event) => {
   event.preventDefault();
   // Récupérer les valeurs des champs du formulaire
   const tache = document.getElementById("tache").value;
+
   const date_echeance = document.getElementById("date_echeance").value;
   const priorite = document.getElementById("priorite").value;
 
@@ -100,7 +101,7 @@ submitButton.addEventListener("click", function() {
   // Définir un délai pour la disparition de l'image
   setTimeout(function() {
     section_1.style.backgroundImage = "";
-  }, 500); // 5 secondes de délai, ajustez selon vos besoins
+  }, 1000); // 1 secondes de délai, ajustez selon vos besoins
 });
 
 
