@@ -1,4 +1,4 @@
-const formulaire = document.getElementById("mon_formulaire");
+const formulaire = document.getElementById("exm");
 const listeDonnees = document.getElementById("liste_donnees");
 
 formulaire.addEventListener("submit", (event) => {
@@ -8,7 +8,7 @@ formulaire.addEventListener("submit", (event) => {
 
   const date_echeance = document.getElementById("date_echeance").value;
   const priorite = document.getElementById("priorite").value;
-
+  
   // Créer un nouvel élément de liste
   const elementListe = document.createElement("div");
   // Ajouter l'élément de liste à la liste
@@ -103,6 +103,13 @@ submitButton.addEventListener("click", function() {
     section_1.style.backgroundImage = "";
   }, 1000); // 1 secondes de délai, ajustez selon vos besoins
 });
+
+
+
+
+
+
+
 
 
 
