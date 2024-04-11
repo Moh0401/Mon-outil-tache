@@ -31,7 +31,7 @@
                 </div>
                <button type="submit" aria-label="enregistrer" style="background-color: #BEB3B3;">Ajouter</button>
             </form>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            
         </section>
         <!--Voici la deuxième section-->
         <section class="section_2">
@@ -52,5 +52,106 @@
 
     </footer>
 </body>
-<script src="index.js"></script>
+<!--<script src="index.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js">
+    $(document).ready(function() {
+  $("#exm").on("submit", function(event) {
+    event.preventDefault();
+
+    // Récupérer les valeurs des champs du formulaire
+    var tache = $("#tache").val();
+    var date_echeance = $("#date_echeance").val();
+    var priorite = $("#priorite").val();
+
+    // Créer un nouvel élément de liste
+    var elementListe = $("<div>").appendTo("#liste_donnees")
+      .css({
+        "margin": "1%",
+        "justify-content": "space-around",
+        "align-items": "center"
+      })
+      .addClass("avantTerminer");
+
+    // Ajouter le titre (tache) à l'élément de liste
+    $("<h4>").text(tache).appendTo(elementListe);
+
+    // Ajouter la date à l'élément de liste
+    $("<span>").text(date_echeance)
+      .css({
+        "border-radius": "30px",
+        "border-color": "black",
+        "border-width": "1%",
+        "padding": "1%"
+      })
+      .appendTo(elementListe);
+
+    // Ajouter la priorité à l'élément de liste
+    $("<span>").text(priorite)
+      .css({
+        "color": "black",
+        "background-color": "white",
+        "border-radius": "30px",
+        "border-width": "0.5%",
+        "padding": "1%"
+      })
+      .appendTo(elementListe);
+
+    //Style de liste donnees
+    $("#liste_donnees").css({
+      "display": "flex",
+      "flex-direction": "column"
+    });
+
+    // Créer un bouton "Supprimer"
+    $("<button>").text("Supprimer")
+      .css({
+        "border-radius": "30px",
+        "border-style": "solid",
+        "border-color": "black",
+        "border-width": "1%",
+        "padding": "1%"
+      })
+      .addClass("boutonSupprimer")
+      .appendTo(elementListe)
+      .on("click", function() {
+        // Supprimer l'élément de liste
+        elementListe.remove();
+      });
+
+    // Vider les champs du formulaire
+    this.reset();
+
+    // Créer un bouton "Terminer"
+    $("<button>").text("Terminer")
+      .css({
+        "border-radius": "30px",
+        "border-style": "solid",
+        "border-color": "black",
+        "border-width": "1%",
+        "padding": "1%"
+      })
+      .addClass("boutonTerminer")
+      .appendTo(elementListe)
+      .on("click", function() {
+        // Cocher la tâche comme terminée
+        elementListe.addClass("terminee");
+
+        // Désactiver le bouton "Terminer"
+        $(this).prop("disabled", true);
+      });
+  });
+
+  $('button[type="submit"]').on("click", function() {
+    // Définir l'image de fond
+    $(".section_1").css("background-image", "url('5xOZ.GIF')")
+      .css("background-size", "cover");
+
+    // Définir un délai pour la disparition de l'image
+    setTimeout(function() {
+      $(".section_1").css("background-image", "");
+    }, 1000); // 1 secondes de délai, ajustez selon vos besoins
+  });
+});
+
+</script>
 </html>
