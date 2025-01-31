@@ -1,25 +1,65 @@
-# Mon-outil-tache
-Objectif :
-Le but de ce projet est de créer une application web interactive permettant à l'utilisateur de saisir des tâches à faire et de les afficher dans une liste. L'utilisateur doit également pouvoir supprimer les tâches de la liste.
+# To-Do List Web Application
 
-Technologies à Utiliser :
-HTML
-CSS
-JavaScript
-Fonctionnalités Attendues :
-L'application devrait comporter une zone de texte où l'utilisateur peut saisir une nouvelle tâche.
-Un bouton “Ajouter" devrait permettre à l'utilisateur d'ajouter la tâche saisie à la liste.
-Les tâches ajoutées devraient être affichées dans une liste à l'écran.
-Chaque tâche dans la liste devrait être accompagnée d'un bouton "Supprimer" permettant à l'utilisateur de supprimer la tâche de la liste.
-L'application devrait être conviviale et esthétiquement agréable, avec une mise en page propre et des éléments visuels appropriés.
-Animations CSS :
-Ajouter des animations CSS pour rendre l'interface utilisateur plus interactive et attrayante. Par exemple, une animation de transition lors de l'ajout ou de la suppression d'une tâche de la liste.
+## Objectif
 
-Personnalisation des tâches :
-Permettez aux utilisateurs de personnaliser leurs tâches en leur donnant la possibilité d'ajouter des attributs supplémentaires tels que la date d'échéance, la priorité, ou des statuts.
+Ce projet a pour but de créer une application web interactive permettant aux utilisateurs de saisir des tâches à faire et de les afficher dans une liste. L'utilisateur doit également pouvoir supprimer les tâches de la liste.
 
-Accessibilité :
-Ajouter des attributs ARIA et assurer une navigation clavier cohérente pour les utilisateurs ayant des besoins spécifiques.
+## Technologies Utilisées
 
-Tests unitaires :
-Écrire des tests unitaires pour valider le bon fonctionnement de votre code JavaScript, en mettant l'accent sur les interactions utilisateur telles que l'ajout et la suppression de tâches.
+- HTML
+- CSS
+- JavaScript
+
+## Fonctionnalités Attendues
+
+1. **Ajout de Tâches**
+
+   - Une zone de texte permettant à l'utilisateur de saisir une nouvelle tâche.
+   - Un bouton "Ajouter" permettant d'ajouter la tâche saisie à la liste.
+
+2. **Affichage des Tâches**
+
+   - Les tâches ajoutées sont affichées dynamiquement dans une liste.
+
+3. **Suppression des Tâches**
+
+   - Chaque tâche dans la liste est accompagnée d'un bouton "Supprimer" permettant à l'utilisateur de la retirer.
+
+4. **Design et Expérience Utilisateur**
+
+   - Interface conviviale et esthétiquement agréable.
+   - Mise en page propre et ergonomique.
+
+5. **Animations CSS**
+
+   - Ajout d'animations CSS pour rendre l'interface plus interactive et attrayante (ex: transition lors de l'ajout ou de la suppression d'une tâche).
+
+6. **Personnalisation des Tâches**
+
+   - Ajout d'attributs supplémentaires aux tâches tels que :
+     - Date d'échéance
+     - Priorité
+     - Statuts
+
+7. **Accessibilité**
+
+   - Intégration des attributs ARIA.
+   - Navigation au clavier fluide pour les utilisateurs ayant des besoins spécifiques.
+
+8. **Tests Unitaires**
+
+   - Rédaction de tests unitaires pour valider le bon fonctionnement du code JavaScript.
+   - Tests axés sur les interactions utilisateur (ajout et suppression de tâches).
+
+## Installation
+
+1. Cloner le dépôt :
+   ```sh
+   git clone https://github.com/votre-utilisateur/votre-repo.git
+   ```
+2. Ouvrir le fichier `index.html` dans un navigateur.
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Merci de soumettre une *pull request* pour proposer des améliorations.
+
